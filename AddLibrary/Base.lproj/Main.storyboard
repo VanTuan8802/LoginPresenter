@@ -79,7 +79,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="txtPassWord" destination="cCt-gL-75Q" id="Bj9-Da-QmR"/>
+                        <outlet property="btLogin" destination="GSf-kN-soW" id="SwA-A9-VfD"/>
+                        <outlet property="txtPassword" destination="cCt-gL-75Q" id="QHx-Ov-yqH"/>
                         <outlet property="txtUser" destination="TcC-zW-OrR" id="pcE-Nh-QAa"/>
                     </connections>
                 </viewController>

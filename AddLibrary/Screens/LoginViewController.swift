@@ -16,7 +16,8 @@ class LoginViewController: UIViewController {
     var presenter: LoginPresenter!
     
     @IBOutlet weak var txtUser: UITextField!
-    @IBOutlet weak var txtPassWord: UITextField!
+    @IBOutlet weak var btLogin: UIButton!
+    @IBOutlet weak var txtPassword: UITextField!
 
     
     override func viewDidLoad() {
@@ -38,7 +39,7 @@ class LoginViewController: UIViewController {
     @IBAction func login(sender:UIButton)
     {
         let username = txtUser.text ?? ""
-        let password = txtPassWord.text ?? ""
+        let password = txtPassword.text ?? ""
         presenter.login(username: username, password: password)
     }
 
