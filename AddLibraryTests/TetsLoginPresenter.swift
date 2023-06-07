@@ -21,12 +21,14 @@ class TestLoginPrenter:QuickSpec {
             var sut:LoginPresenter!
             
             var loginDisplayMock:LoginDisplayMock!
+            
+            var authRespository:AuthRepository!
 
             /**Sẽ chạy trước test case*/
             
             beforeEach {
                 loginDisplayMock = mock(LoginDisplay.self)
-                sut = LoginPresenterImpl(controller: loginDisplayMock)
+                sut = LoginPresenterImpl(controller: loginDisplayMock, authRespository:authRespository )
             }
             
             /**
