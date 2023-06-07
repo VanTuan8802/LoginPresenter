@@ -15,7 +15,7 @@ target 'AddLibrary' do
         pod 'Quick'
         pod 'Nimble'
         pod 'MockingbirdFramework', '~> 0.20'
-        
+        pod 'MBProgressHUD', '~> 1.2.0'
   end
 
   target 'AddLibraryUITests' do

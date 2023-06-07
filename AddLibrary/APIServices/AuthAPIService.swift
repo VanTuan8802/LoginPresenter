@@ -11,14 +11,16 @@ import Alamofire
 protocol AuthAPIService{
     func login(username: String,
                password: String,
-               sucsess:((LoginEntity)->Void)?,
+               success:((LoginEntity)->Void)?,
                failure:((String?)->Void)?)
+//    func register(username: String,
+//                  password:String)
     
 }
 
 class AuthAPIServiceImpl:AuthAPIService{
     func login(username: String, password: String,
-               sucsess: ((LoginEntity) -> Void)?,
+               success: ((LoginEntity) -> Void)?,
                failure: ((String?) -> Void)?) {
         AF.request("https://learn-api-3t7z.onrender.com/login",
                    method: .post,
@@ -32,7 +34,7 @@ class AuthAPIServiceImpl:AuthAPIService{
             switch response.result{
             case .success(let entity):
                 ///Case API success
-                sucsess?(entity)
+                success?(entity)
             case .failure(let error):
                 ///Case API failure
                 failure?(error.failureReason)

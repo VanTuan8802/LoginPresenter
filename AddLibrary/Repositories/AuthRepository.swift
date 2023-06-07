@@ -10,7 +10,7 @@ import Foundation
 protocol AuthRepository{
     func login(username: String,
                password: String,
-               sucsess:((LoginEntity)->Void)?,
+               success:((LoginEntity)->Void)?,
                failure:((String?)->Void)?)
     
 }
@@ -23,9 +23,9 @@ class AuthRepositoryIml:AuthRepository{
     }
     func login(username: String,
                password: String,
-               sucsess:((LoginEntity)->Void)?,
+               success:((LoginEntity)->Void)?,
                failure:((String?)->Void)?){
-        authApiService.login(username: username, password: password, sucsess: sucsess, failure: failure)
+        authApiService.login(username: username, password: password, success: success, failure: failure)
         
     }
 }

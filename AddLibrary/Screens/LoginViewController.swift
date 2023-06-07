@@ -16,7 +16,9 @@ class LoginViewController: UIViewController {
     var presenter: LoginPresenter!
     
     @IBOutlet weak var txtUser: UITextField!
+    @IBOutlet weak var lableUsername: UILabel!
     @IBOutlet weak var btLogin: UIButton!
+    @IBOutlet weak var lablePassword: UILabel!
     @IBOutlet weak var txtPassword: UITextField!
 
     
@@ -30,8 +32,6 @@ class LoginViewController: UIViewController {
             //Khởi tạo instance của LogonPresenter
         presenter = LoginPresenterImpl(controller: self, authRespository: authRespository)
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -39,14 +39,27 @@ class LoginViewController: UIViewController {
     @IBAction func login(sender:UIButton)
     {
         let username = txtUser.text ?? ""
+        if(username == "")
+        {
+            lableUsername.text = "username is required"
+        }
+        
         let password = txtPassword.text ?? ""
+        if(password == "")
+        {
+            lablePassword.text = "password is required"
+        }
         presenter.login(username: username, password: password)
     }
 
 }
 
+extension LoginViewController{
+    
+}
+
 extension LoginViewController : LoginDisplay{
     func validateFailure(messing: String) {
-        print("")
+        print("gggg")
     }
 }

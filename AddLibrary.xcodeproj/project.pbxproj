@@ -22,6 +22,11 @@
 		0EA142252A2E21C50097B890 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142242A2E21C50097B890 /* AuthRepository.swift */; };
 		0EA142272A2E227A0097B890 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142262A2E227A0097B890 /* LoginEntity.swift */; };
 		0EA1422A2A2E23E40097B890 /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142292A2E23E40097B890 /* AuthAPIService.swift */; };
+		0EA1422E2A30AED80097B890 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1422D2A30AED80097B890 /* AuthRouter.swift */; };
+		0EA142302A30AEF30097B890 /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1422F2A30AEF30097B890 /* AuthAPIService.swift */; };
+		0EA142332A30B3C40097B890 /* Constaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142322A30B3C40097B890 /* Constaint.swift */; };
+		0EA142352A30B52F0097B890 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142342A30B52F0097B890 /* Constants.swift */; };
+		0EA142372A30B5EC0097B890 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA142362A30B5EC0097B890 /* Connectivity.swift */; };
 		1173DD2F5F5AB337B56EA87F /* Pods_AddLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6B346E323C81D8FC205D35 /* Pods_AddLibrary.framework */; };
 		3C487798384E1295825DE877 /* Pods_AddLibraryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B33AE7E8B0270FAF4E7326 /* Pods_AddLibraryTests.framework */; };
 		46B5F437EDE288B21E7DFA79 /* Pods_AddLibrary_AddLibraryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8787014C4BB448F613CA73FB /* Pods_AddLibrary_AddLibraryUITests.framework */; };
@@ -67,8 +72,13 @@
 		0EA142242A2E21C50097B890 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		0EA142262A2E227A0097B890 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		0EA142292A2E23E40097B890 /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
+		0EA1422D2A30AED80097B890 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		0EA1422F2A30AEF30097B890 /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
+		0EA142322A30B3C40097B890 /* Constaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constaint.swift; sourceTree = "<group>"; };
+		0EA142342A30B52F0097B890 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0EA142362A30B5EC0097B890 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		10658FDD9EEAC74618467BA3 /* Pods-AddLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddLibrary.debug.xcconfig"; path = "Target Support Files/Pods-AddLibrary/Pods-AddLibrary.debug.xcconfig"; sourceTree = "<group>"; };
-		280EA835DE01E54C6B74E12E /* AddLibraryTests-AddLibraryMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "AddLibraryTests-AddLibraryMocks.generated.swift"; path = "MockingbirdMocks/AddLibraryTests-AddLibraryMocks.generated.swift"; sourceTree = "<group>"; };
+		280EA835DE01E54C6B74E12E /* AddLibraryTests-AddLibraryMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "AddLibraryTests-AddLibraryMocks.generated.swift"; path = "MockingbirdMocks/AddLibraryTests-AddLibraryMocks.generated.swift"; sourceTree = "<group>"; };
 		58B33AE7E8B0270FAF4E7326 /* Pods_AddLibraryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddLibraryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8787014C4BB448F613CA73FB /* Pods_AddLibrary_AddLibraryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddLibrary_AddLibraryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD20F7AC59CD0F791D810564 /* Pods-AddLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddLibraryTests.release.xcconfig"; path = "Target Support Files/Pods-AddLibraryTests/Pods-AddLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +211,11 @@
 		0EA142222A2E21410097B890 /* Networds */ = {
 			isa = PBXGroup;
 			children = (
+				0EA142312A30B3A40097B890 /* Core */,
+				0EA1422C2A30AE900097B890 /* AuthService */,
+				0EA142322A30B3C40097B890 /* Constaint.swift */,
+				0EA142342A30B52F0097B890 /* Constants.swift */,
+				0EA142362A30B5EC0097B890 /* Connectivity.swift */,
 			);
 			path = Networds;
 			sourceTree = "<group>";
@@ -219,6 +234,22 @@
 				0EA142292A2E23E40097B890 /* AuthAPIService.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		0EA1422C2A30AE900097B890 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1422D2A30AED80097B890 /* AuthRouter.swift */,
+				0EA1422F2A30AEF30097B890 /* AuthAPIService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		0EA142312A30B3A40097B890 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		303060B85A80AA7FF0E0BDFB /* Frameworks */ = {
@@ -528,12 +559,17 @@
 			files = (
 				0EA1421C2A2E0FFF0097B890 /* LoginViewController.swift in Sources */,
 				0EA141EA2A2A2FCD0097B890 /* ViewController.swift in Sources */,
+				0EA142332A30B3C40097B890 /* Constaint.swift in Sources */,
+				0EA142302A30AEF30097B890 /* AuthAPIService.swift in Sources */,
 				0EA142252A2E21C50097B890 /* AuthRepository.swift in Sources */,
 				0EA141E62A2A2FCD0097B890 /* AppDelegate.swift in Sources */,
 				0EA1422A2A2E23E40097B890 /* AuthAPIService.swift in Sources */,
 				0EA141E82A2A2FCD0097B890 /* SceneDelegate.swift in Sources */,
+				0EA142372A30B5EC0097B890 /* Connectivity.swift in Sources */,
 				0EA142272A2E227A0097B890 /* LoginEntity.swift in Sources */,
+				0EA1422E2A30AED80097B890 /* AuthRouter.swift in Sources */,
 				0EA1421E2A2E10380097B890 /* LoginPresenter.swift in Sources */,
+				0EA142352A30B52F0097B890 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

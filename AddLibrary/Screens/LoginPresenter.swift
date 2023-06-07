@@ -28,24 +28,32 @@ class LoginPresenterImpl : LoginPresenter{
     
     func login(username: String,password : String)
     {
+        
         if(username.isEmpty){
-            controller.validateFailure(messing: "User is required")
+            
+            controller.validateFailure(messing: "username is required")
         }
+        
         else{
-            //Show loading
-            authRespository.login(username: username, password: password){
-                response in
-                ///
-                ///Tắt loading
-                ///Kiểm tra xem trong response đã có data chưa
-                ///
+            if(username.count<4 || username.count>40){
+                controller.validateFailure(messing: "username have length 4 to 40")
+            }
+            else if(username.contains(" ")){
+                controller.validateFailure(messing: "username don't have space")
+            }
+            else{
+                //Show loading
+                authRespository.login(username: username, password: password){
+                    response in
+                    ///
+                    ///Tắt loading
+                    ///Kiểm tra xem trong response đã có data chưa
+                    ///
+                } failure: <#((String?) -> Void)?#>
+                
                 
             }
-        failure:{errMsg in
-            ///Tắt loading
-            ///Trả về message lỗi cho ViewController
         }
-        }
+
     }
-    
 }

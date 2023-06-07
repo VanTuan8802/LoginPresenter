@@ -54,9 +54,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-kN-soW">
-                                <rect key="frame" x="29" y="494" width="330" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWF-U8-Ren">
+                                <rect key="frame" x="16" y="458" width="152" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot password"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-e1-EYG">
+                                <rect key="frame" x="29" y="366" width="273" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-PW-M02">
+                                <rect key="frame" x="29" y="422" width="273" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-kN-soW">
+                                <rect key="frame" x="31" y="624.33333333333337" width="330" height="39.333333333333371"/>
                                 <color key="backgroundColor" red="0.1350046204" green="0.75035300680000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
@@ -67,18 +86,46 @@
                                     <action selector="loginWithSender:" destination="o17-5d-J6r" eventType="touchUpInside" id="UPf-QE-aX2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWF-U8-Ren">
-                                <rect key="frame" x="16" y="439" width="152" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot password"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qXq-gV-8TK">
+                                <rect key="frame" x="100" y="683.66666666666663" width="273" height="34.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ev-fe-SdN">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-2z-ixd">
+                                        <rect key="frame" x="61.333333333333357" y="0.0" width="211.66666666666663" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h6Z-2z-ixd" secondAttribute="trailing" constant="100" id="4qq-xY-9If"/>
+                                    <constraint firstItem="h6Z-2z-ixd" firstAttribute="top" secondItem="qXq-gV-8TK" secondAttribute="top" constant="20" id="BgH-bI-RK9"/>
+                                    <constraint firstItem="h6Z-2z-ixd" firstAttribute="leading" secondItem="8ev-fe-SdN" secondAttribute="trailing" constant="50" id="FEX-hg-2R4"/>
+                                    <constraint firstItem="h6Z-2z-ixd" firstAttribute="top" secondItem="qXq-gV-8TK" secondAttribute="top" constant="20" id="NKc-2I-ihJ"/>
+                                    <constraint firstItem="h6Z-2z-ixd" firstAttribute="leading" secondItem="8ev-fe-SdN" secondAttribute="trailing" constant="20" id="Qee-kf-ZLt"/>
+                                    <constraint firstAttribute="bottom" secondItem="h6Z-2z-ixd" secondAttribute="bottom" constant="200" id="f5f-o4-ygD"/>
+                                    <constraint firstAttribute="trailing" secondItem="h6Z-2z-ixd" secondAttribute="trailing" constant="100" id="fy9-iT-20G"/>
+                                    <constraint firstAttribute="bottom" secondItem="h6Z-2z-ixd" secondAttribute="bottom" constant="200" id="jb9-Vl-RHu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9hc-Yf-DEC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qXq-gV-8TK" firstAttribute="leading" secondItem="9hc-Yf-DEC" secondAttribute="leading" constant="100" id="Qux-3A-YZC"/>
+                            <constraint firstItem="9hc-Yf-DEC" firstAttribute="bottom" secondItem="qXq-gV-8TK" secondAttribute="bottom" constant="100" id="ZWA-Oh-6jw"/>
+                            <constraint firstItem="qXq-gV-8TK" firstAttribute="top" secondItem="GSf-kN-soW" secondAttribute="bottom" constant="20" id="aY3-hp-IbJ"/>
+                            <constraint firstItem="9hc-Yf-DEC" firstAttribute="trailing" secondItem="qXq-gV-8TK" secondAttribute="trailing" constant="20" id="xd5-pD-X2W"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btLogin" destination="GSf-kN-soW" id="SwA-A9-VfD"/>
+                        <outlet property="lablePassword" destination="eAp-PW-M02" id="jFj-E0-wRO"/>
+                        <outlet property="lableUsername" destination="r5v-e1-EYG" id="0sD-NG-ard"/>
                         <outlet property="txtPassword" destination="cCt-gL-75Q" id="QHx-Ov-yqH"/>
                         <outlet property="txtUser" destination="TcC-zW-OrR" id="pcE-Nh-QAa"/>
                     </connections>
@@ -92,6 +139,12 @@
         <image name="Image" width="368" height="206"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
